@@ -1,0 +1,8 @@
+[
+  {"korean": "학교", "english": "school", "difficulty": "beginner"},
+  {"korean": "물", "english": "water", "difficulty": "beginner"},
+  {"korean": "사랑", "english": "love", "difficulty": "intermediate"},
+  {"korean": "행복", "english": "happiness", "difficulty": "intermediate"},
+  {"korean": "도서관", "english": "library", "difficulty": "advanced"},
+  {"korean": "철학", "english": "philosophy", "difficulty": "advanced"}
+]

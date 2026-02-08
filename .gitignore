@@ -1,0 +1,16 @@
+# Python ignores
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+*.env
+
+# Streamlit cache
+.streamlit/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
