@@ -38,7 +38,6 @@ def auth_ui():
             st.error(str(e))
 
 def logout_button():
-    if st.button("Log Out"):
-        supabase.auth.sign_out()
-        st.session_state.user = None
-        st.rerun()
+    supabase.auth.sign_out()
+    st.session_state.user = None
+    st.rerun()

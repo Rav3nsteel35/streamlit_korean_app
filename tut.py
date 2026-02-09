@@ -37,6 +37,9 @@ with open("korean_words.json", "r", encoding="utf-8") as f:
 if "current_word" not in st.session_state:
     st.session_state.current_word = random.choice(words)
 
+if "show_next" not in st.session_state:
+    st.session_state.show_next = False  # Hidden first
+
 word = st.session_state.current_word
 print("this is a randomly selected word from the json file of korean words: ", word.get("korean"))
 
@@ -70,17 +73,27 @@ if st.button("Submit"):
 
     if correct:
         st.success("Correct!")
-        print("User's answer is correct.")
     else:
         st.error(f"Incorrect! The correct answer is: {word.get('english')}")
-        print("User's answer is incorrect.")
 
-    # Generate a NEW word only AFTER submitting
-    st.session_state.current_word = random.choice(words)
+    st.session_state.show_next = True  # Show the next button
+
+def get_new_word(words, current_word):
+    new_word = random.choice(words)
+    while new_word == current_word:
+        new_word = random.choice(words)
+    return new_word
+
+if st.session_state.show_next:
+    if st.button("Next Word"):
+        st.session_state.current_word = get_new_word(words, st.session_state.current_word)
+        st.session_state.show_next = False
+        st.rerun()
 
 if st.button("Log Out"):
     logout_button()
     st.rerun()
+
 
 def load_responses():
     responses = supabase.table("Responses").select("*").execute()
