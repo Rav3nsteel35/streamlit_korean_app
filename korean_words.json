@@ -4,5 +4,18 @@
   {"korean": "사랑", "english": "love", "difficulty": "intermediate"},
   {"korean": "행복", "english": "happiness", "difficulty": "intermediate"},
   {"korean": "도서관", "english": "library", "difficulty": "advanced"},
-  {"korean": "철학", "english": "philosophy", "difficulty": "advanced"}
+  {"korean": "철학", "english": "philosophy", "difficulty": "advanced"},
+  {"korean": "음악", "english": "music", "difficulty": "beginner"},
+  {"korean": "친구", "english": "friend", "difficulty": "beginner"},
+  {"korean": "가족", "english": "family", "difficulty": "beginner"},
+  {"korean": "여행", "english": "travel", "difficulty": "intermediate"},
+  {"korean": "문화", "english": "culture", "difficulty": "intermediate"},
+  {"korean": "역사", "english": "history", "difficulty": "advanced"},
+  {"korean": "과학", "english": "science", "difficulty": "advanced"},
+  {"korean": "음식", "english": "food", "difficulty": "beginner"},
+  {"korean": "운동", "english": "exercise", "difficulty": "beginner"},
+  {"korean": "건강", "english": "health", "difficulty": "intermediate"},
+  {"korean": "환경", "english": "environment", "difficulty": "intermediate"},
+  {"korean": "경제", "english": "economy", "difficulty": "advanced"},
+  {"korean": "정치", "english": "politics", "difficulty": "advanced"}
 ]

@@ -1,3 +1,4 @@
+import time
 import streamlit as st
 from supabase import create_client, Client
 from dotenv import load_dotenv
@@ -37,8 +38,11 @@ with open("korean_words.json", "r", encoding="utf-8") as f:
 if "current_word" not in st.session_state:
     st.session_state.current_word = random.choice(words)
 
+    # Start the timer when the word is first displayed
+    st.session_state.start_time = time.time()
+
 if "show_next" not in st.session_state:
-    st.session_state.show_next = False  # Hidden first
+    st.session_state.show_next = False  # Hidden at first
 
 word = st.session_state.current_word
 print("this is a randomly selected word from the json file of korean words: ", word.get("korean"))
@@ -49,14 +53,15 @@ st.write("Translate the following word:", word.get("korean"))
 st.write("Difficulty Level:", difficulty)
 
 answer = st.text_input("enter english translation here:")
+response_time = time.time() - st.session_state.start_time
 
-def add_response(user_id, word, user_answer, difficulty, correct):
+def add_response(user_id, word, user_answer, difficulty, correct, response_time):
     supabase.table("Responses").insert({
         "user_id": user_id,
         "word": word,
         "user_answer": user_answer,
         "correct": correct,
-        "response_time": 5,  # Placeholder for response time
+        "response_time": response_time,  # Placeholder for response time
         "difficulty": difficulty
     }).execute()
 
@@ -64,11 +69,12 @@ if st.button("Submit"):
     correct = (answer.strip().lower() == word.get("english").strip().lower())
 
     if answer:
-        add_response(user_id=user_id, word=word.get("korean"), user_answer=answer, difficulty=difficulty, correct=correct)
+        add_response(user_id=user_id, word=word.get("korean"), user_answer=answer, difficulty=difficulty, correct=correct, response_time=response_time)
     else:
         st.error("Please enter an answer before submitting.")
 
     st.write("Thank you for your submission!")
+    st.write(f"Your response time: {response_time:.2f} seconds")
     # st.switch_page("pages/1_Answer.py")
 
     if correct:
@@ -82,12 +88,14 @@ def get_new_word(words, current_word):
     new_word = random.choice(words)
     while new_word == current_word:
         new_word = random.choice(words)
+        
     return new_word
 
 if st.session_state.show_next:
     if st.button("Next Word"):
         st.session_state.current_word = get_new_word(words, st.session_state.current_word)
         st.session_state.show_next = False
+        st.session_state.start_time = time.time()  # Reset the timer for the new word
         st.rerun()
 
 if st.button("Log Out"):
@@ -99,14 +107,3 @@ def load_responses():
     responses = supabase.table("Responses").select("*").execute()
     return responses.data
 
-
-
-
-
-# with st.form(key="my_form"):
-    
-#     name = st.text_input("Enter your name:")
-#     age = st.number_input("Enter your age:")
-
-#     print(name, age)
-#     st.form_submit_button("Submit")
