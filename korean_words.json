@@ -17,5 +17,6 @@
   {"korean": "건강", "english": "health", "difficulty": "intermediate"},
   {"korean": "환경", "english": "environment", "difficulty": "intermediate"},
   {"korean": "경제", "english": "economy", "difficulty": "advanced"},
-  {"korean": "정치", "english": "politics", "difficulty": "advanced"}
+  {"korean": "정치", "english": "politics", "difficulty": "advanced"},
+  {"korean": "기술", "english": "technology", "difficulty": "advanced"}
 ]
