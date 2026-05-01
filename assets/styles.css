@@ -1,0 +1,959 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* ===== BASE STYLES ===== */
+html, body, [class*="css"] {
+    font-family: 'Nunito', sans-serif;
+}
+
+.stApp {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1ff);
+    min-height: 100vh;
+    color: #2f2f2f;
+}
+
+/* ===== HIDE STREAMLIT ELEMENTS ===== */
+[data-testid="stSidebar"],
+[data-testid="collapsedControl"],
+header[data-testid="stHeader"],
+[data-testid="stToolbar"],
+footer {
+    display: none;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3 {
+    color: #db6e58;
+}
+
+.translation-prompt {
+    text-align: center;
+    font-size: 18px;
+    color: #2f2f2f;
+    margin-bottom: 2px;
+}
+
+/* ===== NAVBAR ===== */
+div[data-testid="stHorizontalBlock"]:has(.nav-title) {
+    background: rgba(255, 245, 245, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 8px 24px !important;
+    margin-bottom: 1px;
+    width: 100%;
+}
+
+.nav-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #c85f4a;
+    white-space: nowrap;
+}
+
+.top-nav {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 20px auto;
+    padding: 12px 32px;
+    background: rgba(255, 245, 245, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #c85f4a;
+}
+
+/* Navbar buttons - light peach style */
+div[data-testid="stHorizontalBlock"]:has(.nav-title) .stButton button {
+    background: rgba(255, 235, 235, 0.65) !important;
+    border: none !important;
+    color: #5a355a !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    padding: 8px 24px !important;
+    border-radius: 20px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+div[data-testid="stHorizontalBlock"]:has(.nav-title) .stButton button:hover {
+    background: rgba(255, 225, 225, 0.8) !important;
+    color: #c85f4a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Custom title styling */
+.custom-title {
+    color: #db6e58;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0 30px 0 !important;  /* Removes top margin, keeps small bottom margin */
+    padding: 0 !important;
+    line-height: 1.2;
+}
+
+/* ===== WORD CARD ===== */
+.word-card {
+    background-color: #f89683;
+    border-radius: 25px;
+    padding: 20px 70px;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    width: fit-content;
+    color: #2f2f2f;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.word-card:hover {
+    transform: translateY(-6px);
+    background-color: #f77f68;
+}
+
+/* ===== ATTEMPTS BADGE ===== */
+.attempts-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 5px;
+}
+
+.attempts-badge {
+    display: inline-block;
+    background: #FFE5B4;
+    color: #333;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0;
+
+}
+
+/* ===== INPUT FIELD ===== */
+
+.stTextInput {
+    max-width: 900px !important;
+    text-align: center !important;  /* This centers the text */
+    margin: 0 auto 0px auto;  /* Added bottom margin control */
+}
+
+.stTextInput input {
+    width: 350px !important;  /* Fixed width */
+    background: #ffa4bf !important;
+    color: #2f2f2f !important;
+    border: 2px solid #f7c9da !important;
+    border-radius: 16px !important;
+    padding: 14px 24px !important;
+    font-size: 25px !important;
+    text-align: center !important;  /* This centers the text */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    transition: all 0.2s ease;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.element-container:has(.stTextInput) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+div.row-widget.stHorizontal{
+    display: flex;
+    justify-content: center;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.stButton {
+    margin-top: -5px !important;
+}
+
+.input-row {
+    width: 100%;
+    max-width: 600px;  /* Match your input width */
+    margin: 0 auto 5px auto;  /* Center it with small bottom margin */
+}
+
+/* Remove default input containers */
+div[data-baseweb="input"],
+div[data-baseweb="input"] > div,
+.stTextInput > div > div,
+.stTextInput > div > div > div {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Style the actual input */
+.stTextInput input {
+    background: #ffa4bf !important;
+    color: #2f2f2f !important;
+    border: 2px solid #f7c9da !important;
+    border-radius: 16px !important;
+    padding: 1px 0px !important;
+    font-size: 18px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    transition: all 0.2s ease;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.stTextInput input:focus {
+    border-color: #ff7eb3 !important;
+    outline: none !important;
+    box-shadow: 0 0 10px rgba(255,126,179,0.35) !important;
+}
+
+.stTextInput input::placeholder {
+    color: #caa5b8;
+}
+
+/* Answer box container */
+.answer-box {
+    margin-top: -20px;
+}
+
+/* ===== BUTTONS ===== */
+
+.stButton button {
+    background: rgba(255, 235, 235, 0.65) !important;
+    color: #5a355a !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 8px 24px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.stButton button:hover {
+        background: rgba(255, 225, 225, 0.8) !important;
+        color: #c85f4a !important;
+}
+
+/* ===== MASCOT ===== */
+.floating-mascot {
+    position: fixed;
+    bottom: -60px;
+    right: -250px;
+    z-index: 9999;
+    /* pointer-events: none; */
+}
+
+.floating-mascot img {
+    width: 120px;
+    height: auto;
+    opacity: 0.95;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.18));
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-mascot img:hover {
+    transform: scale(1.05) rotate(-4deg);  /* Optional: fun hover effect */
+}
+
+
+section.main > div:first-child button:hover {
+    background: rgba(255, 225, 225, 0.8) !important;
+    color: #c85f4a !important;
+}
+
+/* Force mascot to be outside any containers */
+.main > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* 
+div:has(> .floating-mascot) {
+    position: static !important;
+    overflow: visible !important;
+    transform: none !important;
+} */
+
+/* ===== DASHBOARD TEXT COLORS ===== */
+/* Fix all dashboard text to be dark and readable */
+[data-testid="stApp"] h1, 
+[data-testid="stApp"] h2, 
+[data-testid="stApp"] h3,
+[data-testid="stApp"] .custom-title {
+    color: #2f2f2f !important;  /* Dark gray, matching your main app */
+}
+
+/* Style the insight messages */
+[data-testid="stApp"] .stAlert {
+    background: rgba(255, 245, 245, 0.45) !important;
+    backdrop-filter: blur(8px) !important;
+    border-radius: 16px !important;
+    border: none !important;
+    color: #2f2f2f !important;
+}
+
+[data-testid="stApp"] .stAlert p {
+    color: #2f2f2f !important;
+}
+
+/* Style metric cards if they exist */
+[data-testid="stApp"] div[data-testid="stMetricValue"] {
+    color: #db6e58 !important;  /* Your accent color */
+    font-size: 2rem !important;
+}
+
+[data-testid="stApp"] div[data-testid="stMetricLabel"] {
+    color: #5a355a !important;  /* Your purple-ish color */
+}
+
+/* Style dataframe/table text */
+[data-testid="stApp"] .stDataFrame {
+    color: #2f2f2f !important;
+}
+
+[data-testid="stApp"] .stDataFrame td {
+    color: #2f2f2f !important;
+}
+
+/* Style chart text */
+[data-testid="stApp"] .stChart {
+    color: #2f2f2f !important;
+}
+
+/* Style any other dashboard text */
+[data-testid="stApp"] p, 
+[data-testid="stApp"] li, 
+[data-testid="stApp"] span:not(.nav-title):not(.attempts-badge) {
+    color: #2f2f2f !important;
+}
+
+/* Keep your existing colored elements */
+.attempts-badge {
+    color: #333 !important;  /* Keep this as is */
+}
+
+.nav-title {
+    color: #c85f4a !important;  /* Keep navbar title color */
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1ff);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.loading-spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #c85f4a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loading-text {
+    color: #5a355a;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Mascot loading animation */
+.loading-mascot {
+    width: 150px;
+    height: auto;
+    animation: bounce 2s ease infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Prevent flash of unstyled content */
+[data-testid="stAppViewContainer"] {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide Streamlit's default loading animation */
+.stApp [data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
+/* Customize the spinner color to match your theme */
+.stSpinner > div {
+    border-color: #c85f4a !important;
+}
+
+/* Hide Streamlit's default loading animation */
+.stApp [data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
+.stApp [data-testid="stSpinner"] {
+    display: none !important;
+}
+
+/* Custom loading animation that matches your theme */
+.stApp::before {
+    content: "🌸";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+    display: none;
+}
+
+.stApp.loading::before {
+    display: block;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: #5a355a;
+    margin-bottom: 1rem;  /* Reduced from 2rem */
+    margin-top: 0.5rem;    /* Add a little top margin */
+    font-weight: 400;
+}
+
+.hero-text {
+    text-align: center;
+    margin: 2rem auto 1rem auto;
+    max-width: 700px;
+}
+
+.hero-text h2 {
+    font-size: 2.2rem !important;
+    color: #c85f4a !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.hero-text p {
+    font-size: 1.3rem !important;
+    color: #2f2f2f !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Add a little accent decoration */
+/* .hero-text::before {
+    content: "🌸";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+    animation: float 3s ease-in-out infinite;
+} */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Section title styling */
+.section-title {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.section-title h3 {
+    color: #5a355a !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    border-radius: 2px;
+}
+
+.stTable {
+    color: #2f2f2f !important;
+}
+
+.stTable table {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.stTable th {
+    color: #c85f4a !important;
+    font-weight: bold !important;
+    background: rgba(200, 95, 74, 0.1) !important;
+    padding: 12px !important;
+}
+
+.stTable td {
+    color: #2f2f2f !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 10px !important;
+    border-bottom: 1px solid rgba(200, 95, 74, 0.2) !important;
+}
+
+.stTable tr:hover td {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Style for metric cards if they're also hard to read */
+div[data-testid="stMetricValue"] {
+    color: #c85f4a !important;
+    font-size: 2rem !important;
+}
+
+
+/* Make sure landing page navbar matches */
+.landing-page .navbar-row .stButton button {
+    background: rgba(255, 235, 235, 0.65) !important;
+    color: #5a355a !important;
+}
+
+/* Add hero-text styles that were missing */
+.hero-text {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 700px;
+}
+
+.hero-text h2 {
+    color: #c85f4a !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.3 !important;
+}
+
+.hero-text p {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    color: #2f2f2f;
+    font-size: 1.2rem;
+}
+
+/* .navbar-row .stButton button,
+div[data-testid="stHorizontalBlock"] .stButton button {
+    background: rgba(255, 235, 235, 0.65) !important;
+    color: #5a355a !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+.navbar-row .stButton button:hover,
+div[data-testid="stHorizontalBlock"] .stButton button:hover {
+    background: rgba(255, 225, 225, 0.8) !important;
+    color: #c85f4a !important;
+    transform: translateY(-2px);
+} */
+
+/* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+/* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+.block-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem !important;
+    background: rgba(255, 245, 245, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== LOGIN PAGE SPECIFIC STYLES ===== */
+.login-page {
+    width: 100%;
+}
+
+.login-title {
+    color: #c85f4a !important;
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important;
+}
+
+.login-subtitle {
+    color: #5a355a !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+}
+
+/* Back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-button .stButton button {
+    background: rgba(255, 235, 235, 0.65) !important;
+    color: #5a355a !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 6px 16px !important;
+    font-size: 0.9rem !important;
+    backdrop-filter: blur(4px);
+    width: auto !important;
+}
+
+/* Login page form inputs - full width */
+.login-page .stTextInput {
+    margin-bottom: 1rem !important;
+}
+
+.login-page .stTextInput input {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid #ffd6e7 !important;
+    border-radius: 30px !important;
+    padding: 10px 16px !important;
+    font-size: 0.95rem !important;
+    width: 500px !important;  /* Fixed width */
+    color: #2f2f2f !important;
+}
+
+/* Login page buttons - FULL WIDTH */
+.login-page .stButton {
+    width: 500px !important;  /* Fixed width */
+    display: block !important;
+}
+
+.login-page .stButton button {
+    width: 500px !important;  /* Fixed width */
+    border-radius: 30px !important;
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin: 5px 0 !important;
+    background: rgba(255, 235, 235, 0.65) !important;
+    color: #5a355a !important;
+}
+
+.login-page .stButton button:hover {
+    background: rgba(255, 225, 225, 0.8) !important;
+    color: #c85f4a !important;
+    transform: translateY(-2px);
+}
+
+/* Force login buttons to be full width */
+.login-page .stButton button {
+    width: 500px !important;  /* Fixed width */
+    display: block !important;
+}
+
+.stTextInput input {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid #ffd6e7 !important;
+    border-radius: 30px !important;
+    padding: 12px 20px !important;
+    font-size: 1.1rem !important;
+    color: #2f2f2f !important;
+    text-align: center !important;
+}
+
+.stTextInput input:focus {
+    border-color: #ff7eb3 !important;
+    box-shadow: 0 0 10px rgba(255,126,179,0.35) !important;
+    outline: none !important;
+}
+
+.stTextInput input::placeholder {
+    color: #caa5b8 !important;
+    font-style: italic !important;
+}
+
+/* ===== MOBILE RESPONSIVENESS - LANDING PAGE ===== */
+@media only screen and (max-width: 768px) {
+    /* Make container narrower on mobile */
+    .block-container {
+        max-width: 95% !important;
+        padding: 1rem !important;
+        margin: 0.5rem auto !important;
+    }
+    
+    /* Hero section spacing */
+    .hero-text {
+        margin: 1rem auto !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .hero-text p {
+        font-size: 1rem !important;
+        padding: 1rem !important;
+    }
+    
+    /* Feature cards - stack vertically on mobile */
+    .features {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        margin: 1.5rem 0 2rem 0!important;
+    }
+    
+    .feature-card {
+        width: 90% !important;
+        max-width: 280px !important;
+        padding: 1rem !important;
+        margin: 0 auto !important;  /* Center horizontally */
+        text-align: center !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Add extra spacing below the feature cards section */
+    .features + div {
+        margin-top: 1rem !important;
+    }
+
+    .feature-card:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Section title */
+    .section-title h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    /* CTA Buttons - stack vertically on mobile */
+    .cta-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+    }
+    
+    .cta-buttons .stButton button {
+        width: 90% !important;
+        min-width: 200px !important;
+        font-size: 1rem !important;
+        padding: 0.6rem 1.5rem !important;
+    }
+    
+    /* Navbar - make it responsive */
+    .navbar-row {
+        padding: 6px 12px !important;
+        margin: 0 auto 10px auto !important;
+    }
+    
+    .nav-title {
+        font-size: 18px !important;
+    }
+    
+    .navbar-row .stButton button {
+        font-size: 12px !important;
+        padding: 4px 12px !important;
+    }
+    
+    /* Mascot - smaller on mobile */
+    .landing-mascot {
+        bottom: 10px !important;
+        right: 10px !important;
+    }
+    
+    .landing-mascot img {
+        width: 80px !important;
+        height: auto !important;
+    }
+
+    /* Add spacing after section title */
+    .section-title {
+        margin: 1rem 0 1.5rem 0 !important;
+    }
+    
+    /* Add spacing before feature cards */
+    .section-title + div {
+        margin-top: 1rem !important;
+    }
+    
+    /* Ensure feature cards container is centered */
+    div[data-testid="stHorizontalBlock"] {
+        justify-content: center !important;
+    }
+
+    div[data-testid="column"] {
+        margin-bottom: 1.2rem !important;  /* Space between cards */
+    }
+
+    div[data-testid="column"]:last-child {
+        margin-bottom: 0 !important;  /* No margin after last card */
+    }
+
+    .features div[data-testid="column"] {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .features div[data-testid="column"]:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+}
+
+/* Make sure the columns are centered on mobile */
+@media only screen and (max-width: 768px) {
+    .features div[data-testid="column"] {
+        margin-bottom: 1.5rem !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    /* Last column should have no margin */
+    .features div[data-testid="column"]:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Style the feature cards themselves */
+    .feature-card {
+        width: 90% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        padding: 1.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .features div[data-testid="column"] {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .features div[data-testid="column"]:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem !important;
+    }
+    
+    .feature-card {
+        width: 95% !important;
+    }
+    
+    .nav-title {
+        font-size: 14px !important;
+    }
+    
+    .navbar-row .stButton button {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+    }
+    
+    .landing-mascot img {
+        width: 60px !important;
+    }
+}
+
+/* remove annoying streamlit styling kinks*/
+/* Stop browser from auto-linking anything */
+.stApp {
+    user-select: text !important;
+}
+
+/* Disable all default link behaviors */
+.stApp a[href=""]:not([href]),
+.stApp a:not([href]) {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* Remove any tooltips */
+.stApp * {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+*:hover::after {
+    display: none !important;
+}
+
+*:hover::before {
+    display: none !important;
+}

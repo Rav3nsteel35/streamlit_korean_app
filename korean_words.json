@@ -1,0 +1,1090 @@
+[
+  {
+    "korean": "학교",
+    "english": "school",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 400
+  },
+  {
+    "korean": "공부",
+    "english": "to study",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "education",
+    "frequency_rank": 650
+  },
+  {
+    "korean": "책",
+    "english": "book",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 550
+  },
+  {
+    "korean": "먹다",
+    "english": "to eat",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "daily life",
+    "frequency_rank": 300
+  },
+  {
+    "korean": "물",
+    "english": "water",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "daily life",
+    "frequency_rank": 150
+  },
+  {
+    "korean": "사과",
+    "english": "apple",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 900
+  },
+  {
+    "korean": "달리다",
+    "english": "to run",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "sports",
+    "frequency_rank": 1800
+  },
+  {
+    "korean": "사랑",
+    "english": "love",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 300
+  },
+  {
+    "korean": "행복",
+    "english": "happiness",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 1200
+  },
+  {
+    "korean": "도서관",
+    "english": "library",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 2200
+  },
+  {
+    "korean": "철학",
+    "english": "philosophy",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 3400
+  },
+  {
+    "korean": "음악",
+    "english": "music",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "arts",
+    "frequency_rank": 500
+  },
+  {
+    "korean": "친구",
+    "english": "friend",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "relationships",
+    "frequency_rank": 250
+  },
+  {
+    "korean": "가족",
+    "english": "family",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "relationships",
+    "frequency_rank": 350
+  },
+  {
+    "korean": "여행",
+    "english": "travel",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "activities",
+    "frequency_rank": 800
+  },
+  {
+    "korean": "문화",
+    "english": "culture",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 900
+  },
+  {
+    "korean": "역사",
+    "english": "history",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 1100
+  },
+  {
+    "korean": "과학",
+    "english": "science",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "education",
+    "frequency_rank": 2000
+  },
+  {
+    "korean": "음식",
+    "english": "food",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 600
+  },
+  {
+    "korean": "운동",
+    "english": "to exercise",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "sports",
+    "frequency_rank": 700
+  },
+  {
+    "korean": "건강",
+    "english": "health",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "health",
+    "frequency_rank": 750
+  },
+  {
+    "korean": "환경",
+    "english": "environment",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "nature",
+    "frequency_rank": 1600
+  },
+  {
+    "korean": "경제",
+    "english": "economy",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "business",
+    "frequency_rank": 2400
+  },
+  {
+    "korean": "정치",
+    "english": "politics",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "politics",
+    "frequency_rank": 2800
+  },
+  {
+    "korean": "기술",
+    "english": "technology",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "technology",
+    "frequency_rank": 2600
+  },
+  {
+    "korean": "안녕하세요",
+    "english": "hello",
+    "difficulty": "beginner",
+    "word_type": "phrase",
+    "category": "greetings",
+    "frequency_rank": 10
+  },
+  {
+    "korean": "감사합니다",
+    "english": "thank you",
+    "difficulty": "beginner",
+    "word_type": "phrase",
+    "category": "greetings",
+    "frequency_rank": 15
+  },
+  {
+    "korean": "네",
+    "english": "yes",
+    "difficulty": "beginner",
+    "word_type": "particle",
+    "category": "basics",
+    "frequency_rank": 5
+  },
+  {
+    "korean": "아니요",
+    "english": "no",
+    "difficulty": "beginner",
+    "word_type": "particle",
+    "category": "basics",
+    "frequency_rank": 8
+  },
+  {
+    "korean": "이름",
+    "english": "name",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "basics",
+    "frequency_rank": 120
+  },
+  {
+    "korean": "사람",
+    "english": "person",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 80
+  },
+  {
+    "korean": "남자",
+    "english": "man",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 200
+  },
+  {
+    "korean": "여자",
+    "english": "woman",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 210
+  },
+  {
+    "korean": "아이",
+    "english": "child",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 280
+  },
+  {
+    "korean": "선생님",
+    "english": "teacher",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 320
+  },
+  {
+    "korean": "학생",
+    "english": "student",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "people",
+    "frequency_rank": 180
+  },
+  {
+    "korean": "의사",
+    "english": "doctor",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "professions",
+    "frequency_rank": 450
+  },
+  {
+    "korean": "요리사",
+    "english": "chef",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "professions",
+    "frequency_rank": 850
+  },
+  {
+    "korean": "가수",
+    "english": "singer",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "professions",
+    "frequency_rank": 580
+  },
+  {
+    "korean": "배우",
+    "english": "actor",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "professions",
+    "frequency_rank": 620
+  },
+  {
+    "korean": "시간",
+    "english": "time",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 40
+  },
+  {
+    "korean": "오늘",
+    "english": "today",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 70
+  },
+  {
+    "korean": "내일",
+    "english": "tomorrow",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 90
+  },
+  {
+    "korean": "어제",
+    "english": "yesterday",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 110
+  },
+  {
+    "korean": "년",
+    "english": "year",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 60
+  },
+  {
+    "korean": "월",
+    "english": "month",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 130
+  },
+  {
+    "korean": "일",
+    "english": "day",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 50
+  },
+  {
+    "korean": "주",
+    "english": "week",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 140
+  },
+  {
+    "korean": "분",
+    "english": "minute",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "time",
+    "frequency_rank": 160
+  },
+  {
+    "korean": "있다",
+    "english": "to exist/have",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 20
+  },
+  {
+    "korean": "없다",
+    "english": "to not exist",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 45
+  },
+  {
+    "korean": "하다",
+    "english": "to do",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 25
+  },
+  {
+    "korean": "되다",
+    "english": "to become",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 85
+  },
+  {
+    "korean": "보다",
+    "english": "to see",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 95
+  },
+  {
+    "korean": "주다",
+    "english": "to give",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 150
+  },
+  {
+    "korean": "받다",
+    "english": "to receive",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 250
+  },
+  {
+    "korean": "알다",
+    "english": "to know",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 105
+  },
+  {
+    "korean": "모르다",
+    "english": "to not know",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 170
+  },
+  {
+    "korean": "좋아하다",
+    "english": "to like",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "emotions",
+    "frequency_rank": 220
+  },
+  {
+    "korean": "싫어하다",
+    "english": "to dislike",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "emotions",
+    "frequency_rank": 380
+  },
+  {
+    "korean": "크다",
+    "english": "big",
+    "difficulty": "beginner",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 190
+  },
+  {
+    "korean": "작다",
+    "english": "small",
+    "difficulty": "beginner",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 240
+  },
+  {
+    "korean": "길다",
+    "english": "long",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 430
+  },
+  {
+    "korean": "짧다",
+    "english": "short",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 470
+  },
+  {
+    "korean": "비싸다",
+    "english": "expensive",
+    "difficulty": "beginner",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 520
+  },
+  {
+    "korean": "싸다",
+    "english": "cheap",
+    "difficulty": "beginner",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 560
+  },
+  {
+    "korean": "맵다",
+    "english": "spicy",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "food",
+    "frequency_rank": 680
+  },
+  {
+    "korean": "달다",
+    "english": "sweet",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "food",
+    "frequency_rank": 720
+  },
+  {
+    "korean": "시다",
+    "english": "sour",
+    "difficulty": "advanced",
+    "word_type": "adjective",
+    "category": "food",
+    "frequency_rank": 890
+  },
+  {
+    "korean": "짜다",
+    "english": "salty",
+    "difficulty": "advanced",
+    "word_type": "adjective",
+    "category": "food",
+    "frequency_rank": 920
+  },
+  {
+    "korean": "쓰다",
+    "english": "bitter",
+    "difficulty": "advanced",
+    "word_type": "adjective",
+    "category": "food",
+    "frequency_rank": 980
+  },
+  {
+    "korean": "재미있다",
+    "english": "fun",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "descriptions",
+    "frequency_rank": 290
+  },
+  {
+    "korean": "지루하다",
+    "english": "boring",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "emotions",
+    "frequency_rank": 590
+  },
+  {
+    "korean": "피곤하다",
+    "english": "tired",
+    "difficulty": "intermediate",
+    "word_type": "adjective",
+    "category": "emotions",
+    "frequency_rank": 410
+  },
+  {
+    "korean": "배고프다",
+    "english": "hungry",
+    "difficulty": "beginner",
+    "word_type": "adjective",
+    "category": "emotions",
+    "frequency_rank": 360
+  },
+  {
+    "korean": "의미",
+    "english": "meaning",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "language",
+    "frequency_rank": 850
+  },
+  {
+    "korean": "표현",
+    "english": "expression",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "language",
+    "frequency_rank": 920
+  },
+  {
+    "korean": "대화",
+    "english": "conversation",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "communication",
+    "frequency_rank": 1100
+  },
+  {
+    "korean": "토론",
+    "english": "debate",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "communication",
+    "frequency_rank": 2450
+  },
+  {
+    "korean": "분위기",
+    "english": "atmosphere",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "environment",
+    "frequency_rank": 1350
+  },
+  {
+    "korean": "경험",
+    "english": "experience",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "life",
+    "frequency_rank": 780
+  },
+  {
+    "korean": "습관",
+    "english": "habit",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "life",
+    "frequency_rank": 1680
+  },
+  {
+    "korean": "갈등",
+    "english": "conflict",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "relationships",
+    "frequency_rank": 2780
+  },
+  {
+    "korean": "신뢰",
+    "english": "trust",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "relationships",
+    "frequency_rank": 3150
+  },
+  {
+    "korean": "존중",
+    "english": "respect",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "relationships",
+    "frequency_rank": 3420
+  },
+  {
+    "korean": "가치",
+    "english": "value",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "philosophy",
+    "frequency_rank": 1450
+  },
+  {
+    "korean": "진실",
+    "english": "truth",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "philosophy",
+    "frequency_rank": 1890
+  },
+  {
+    "korean": "거짓말",
+    "english": "lie",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "communication",
+    "frequency_rank": 1980
+  },
+  {
+    "korean": "용기",
+    "english": "courage",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 2870
+  },
+  {
+    "korean": "두려움",
+    "english": "fear",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 2230
+  },
+  {
+    "korean": "실망",
+    "english": "disappointment",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 3050
+  },
+  {
+    "korean": "후회",
+    "english": "regret",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "emotions",
+    "frequency_rank": 3350
+  },
+  {
+    "korean": "노력",
+    "english": "effort",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "actions",
+    "frequency_rank": 1250
+  },
+  {
+    "korean": "성공",
+    "english": "success",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "achievement",
+    "frequency_rank": 1420
+  },
+  {
+    "korean": "실패",
+    "english": "failure",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "achievement",
+    "frequency_rank": 1720
+  },
+  {
+    "korean": "발전",
+    "english": "development",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "progress",
+    "frequency_rank": 2350
+  },
+  {
+    "korean": "성장",
+    "english": "growth",
+    "difficulty": "advanced",
+    "word_type": "noun",
+    "category": "progress",
+    "frequency_rank": 2680
+  },
+  {
+    "korean": "변화",
+    "english": "change",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "process",
+    "frequency_rank": 1550
+  },
+  {
+    "korean": "선택",
+    "english": "choice",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "decisions",
+    "frequency_rank": 1380
+  },
+  {
+    "korean": "결정",
+    "english": "decision",
+    "difficulty": "intermediate",
+    "word_type": "noun",
+    "category": "decisions",
+    "frequency_rank": 1480
+  },
+  {
+    "korean": "오다",
+    "english": "to come",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "movement",
+    "frequency_rank": 35
+  },
+  {
+    "korean": "가다",
+    "english": "to go",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "movement",
+    "frequency_rank": 30
+  },
+  {
+    "korean": "만나다",
+    "english": "to meet",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "social",
+    "frequency_rank": 180
+  },
+  {
+    "korean": "말하다",
+    "english": "to speak",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "communication",
+    "frequency_rank": 120
+  },
+  {
+    "korean": "듣다",
+    "english": "to listen",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "senses",
+    "frequency_rank": 140
+  },
+  {
+    "korean": "쓰다",
+    "english": "to write",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 160
+  },
+  {
+    "korean": "읽다",
+    "english": "to read",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 130
+  },
+  {
+    "korean": "배우다",
+    "english": "to learn",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "education",
+    "frequency_rank": 200
+  },
+  {
+    "korean": "가르치다",
+    "english": "to teach",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "education",
+    "frequency_rank": 280
+  },
+  {
+    "korean": "살다",
+    "english": "to live",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "life",
+    "frequency_rank": 90
+  },
+  {
+    "korean": "죽다",
+    "english": "to die",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "life",
+    "frequency_rank": 340
+  },
+  {
+    "korean": "웃다",
+    "english": "to laugh",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "emotions",
+    "frequency_rank": 260
+  },
+  {
+    "korean": "울다",
+    "english": "to cry",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "emotions",
+    "frequency_rank": 350
+  },
+  {
+    "korean": "생각하다",
+    "english": "to think",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "thoughts",
+    "frequency_rank": 55
+  },
+  {
+    "korean": "믿다",
+    "english": "to believe",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "thoughts",
+    "frequency_rank": 290
+  },
+  {
+    "korean": "기다리다",
+    "english": "to wait",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 310
+  },
+  {
+    "korean": "열다",
+    "english": "to open",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 370
+  },
+  {
+    "korean": "닫다",
+    "english": "to close",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 390
+  },
+  {
+    "korean": "시작하다",
+    "english": "to start",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 230
+  },
+  {
+    "korean": "끝나다",
+    "english": "to end",
+    "difficulty": "intermediate",
+    "word_type": "verb",
+    "category": "actions",
+    "frequency_rank": 270
+  },
+  {
+    "korean": "빵",
+    "english": "bread",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 350
+  },
+  {
+    "korean": "우유",
+    "english": "milk",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 400
+  },
+  {
+    "korean": "계란",
+    "english": "egg",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 450
+  },
+  {
+    "korean": "커피",
+    "english": "coffee",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 200
+  },
+  {
+    "korean": "차",
+    "english": "tea",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "food",
+    "frequency_rank": 500
+  },
+  {
+    "korean": "개",
+    "english": "dog",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "animals",
+    "frequency_rank": 300
+  },
+  {
+    "korean": "고양이",
+    "english": "cat",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "animals",
+    "frequency_rank": 320
+  },
+  {
+    "korean": "새",
+    "english": "bird",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "animals",
+    "frequency_rank": 800
+  },
+  {
+    "korean": "비",
+    "english": "rain",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "weather",
+    "frequency_rank": 600
+  },
+  {
+    "korean": "눈",
+    "english": "snow",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "weather",
+    "frequency_rank": 650
+  },
+  {
+    "korean": "바람",
+    "english": "wind",
+    "difficulty": "beginner",
+    "word_type": "noun",
+    "category": "weather",
+    "frequency_rank": 700
+  },
+  {
+    "korean": "자다",
+    "english": "to sleep",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 100
+  },
+  {
+    "korean": "일하다",
+    "english": "to work",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 150
+  },
+  {
+    "korean": "놀다",
+    "english": "to play",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 180
+  },
+  {
+    "korean": "마시다",
+    "english": "to drink",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 120
+  },
+  {
+    "korean": "사다",
+    "english": "to buy",
+    "difficulty": "beginner",
+    "word_type": "verb",
+    "category": "verbs",
+    "frequency_rank": 140
+  }
+]

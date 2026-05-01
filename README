@@ -1,0 +1,92 @@
+🌸 Korean Quest
+A free, cute, and effective Korean vocabulary learning app built with Python and Streamlit.
+
+Try it live → https://k-quest.streamlit.app
+
+📖 About
+Korean Quest helps you learn Korean vocabulary through spaced repetition. You see a Korean word, type the English translation, and get instant feedback. The app tracks your progress, streaks, and learning patterns so you can see how far you've come.
+
+Built for Korean learners at any level — from beginners building basic vocab to intermediate learners drilling less common words.
+
+✨ Features
+Spaced Repetition System – Words you struggle with appear more often
+
+Real-time Feedback – Instant check on your answers with response time tracking
+
+Dashboard Analytics – Accuracy by category, hardest words, learning curve, and more
+
+Streak Tracking – Daily practice streaks with milestone celebrations
+
+Word Search – Look up any word you've practiced and see your history
+
+Achievement Badges – Unlock milestones as you progress
+
+User Authentication – Secure signup/login with Supabase
+
+Fully Responsive – Works on desktop and mobile
+
+🛠️ Tech Stack
+Category	Technology
+Frontend/Backend	Python, Streamlit
+Authentication & Database	Supabase
+Styling	Custom CSS
+Data Visualization	Altair, Plotly
+Deployment	Streamlit Cloud
+
+🚀 Getting Started (Local Development)
+1. Clone the repository
+bash
+git clone https://github.com/Rav3nsteel35/streamlit_korean_app.git
+cd streamlit_korean_app
+
+2. Install dependencies
+bash
+pip install -r requirements.txt
+
+3. Set up environment variables
+Create a .env file in the root directory with your Supabase credentials:
+
+text
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_anon_key
+
+4. Run the app
+bash
+streamlit run Home.py
+The app will open at http://localhost:8501
+
+📁 Project Structure
+text
+streamlit_korean_app/
+├── Home.py                 # Landing page
+├── auth_functions.py       # Authentication logic
+├── utils.py                # Helper functions (CSS, images)
+├── korean_words.json       # Word database
+├── requirements.txt        # Python dependencies
+├── assets/
+│   ├── styles.css          # Custom styling
+│   └── download.jpg        # Mascot image
+└── pages/
+    ├── 1_Login.py          # Login/signup page
+    ├── 1_Practice.py       # Main learning interface
+    ├── 1_Dashboard.py      # Analytics & stats
+    └── 1_Profile.py        # User profile & achievements
+
+🗂️ Word Bank
+Currently includes 100+ Korean words with:
+
+English translation
+
+Difficulty level (beginner, intermediate, advanced)
+
+Category (education, food, emotions, etc.)
+
+Frequency rank
+
+Want to add more words? Feel free to contribute to korean_words.json!
+
+🌸 Acknowledgements
+I just want to shout out Jenell Son who took time out of her busy schedule to help me test the app and give valuable feedback. Couldn't have done this without her.
+
+📄 License
+MIT © Mervyn Winn
