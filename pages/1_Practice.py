@@ -202,6 +202,9 @@ if 'attempts' not in st.session_state:
     st.session_state.attempts = 0
 
 word = st.session_state.current_word
+
+word_to_cluster = json.load(open("word_cluster_mapping.json", "r", encoding="utf-8"))
+
 print("this is a randomly selected word from the json file of korean words: ", word.get("korean"))
 difficulty = word.get("difficulty")
 category = word.get("category")
@@ -308,6 +311,41 @@ def update_word_stats(user_id, word, times_seen_before, times_correct_before, ti
         "ease_factor": ease_factor,
         "interval_days": interval_days
     }, on_conflict="user_id, word").execute() 
+
+def update_cluster_stats(user_id, word_korean, is_correct, cluster_id, supabase_client):
+    """update the user's accuracy for this word's semantic cluster"""
+    # Get current stats for this cluster
+    result = supabase.table("userclusterstats")\
+        .select("total_attempts, correct_attempts")\
+        .eq("user_id", user_id)\
+        .eq("cluster_id", cluster_id)\
+        .execute()
+
+    if result.data:
+        current = result.data[0] 
+        new_total = current["total_attempts"] + 1
+        new_correct = current["correct_attempts"] + 1 if correct else current["correct_attempts"]
+        new_accuracy = round((new_correct / new_total) * 100, 1) 
+
+        supabase.table("userclusterctats")\
+            .update({
+                "total_attempts": new_total,
+                "correct_attempts": new_correct,
+                "accuracy": new_accuracy
+            })\
+            .eq("user_id", user_id)\
+            .eq("cluster_id", cluster_id)\
+            .execute()
+    else: 
+        supabase.table("userclusterstats").insert({
+            "user_id": user_id,
+            "cluster_id": cluster_id,
+            "total_attempts": 1,
+            "correct_attempts": 1 if is_correct else 0,
+            "accuracy": 1.0 if is_correct else 0.0,
+            "updated_at": datetime.now().isoformat()
+        }).execute()
+    
         
 # st.write("DEBUG show_next:", st.session_state.show_next)
 # print("DEBUG show_next:", st.session_state.show_next)
@@ -370,6 +408,11 @@ if st.session_state.get("submitted", False):
                         word_length=word_length,
                         num_syllables=num_syllables,
                         word_frequency=word_frequency)
+        
+        if word_to_cluster:
+            cluster_id = word_to_cluster.get(word.get("korean"))
+            if cluster_id is not None:
+                update_cluster_stats(user_id, word.get("korean"), correct, cluster_id, supabase)
 
         if "word_progress" not in st.session_state:
             result = supabase.table("WordProgress").select("*").eq("user_id", user_id).execute()
@@ -466,8 +509,21 @@ if "last_correct" in st.session_state:
     else:
         st.error("Incorrect — try again!")
 
+def get_unseen_words_in_cluster(user_id, cluster_id, words, word_to_cluster):
+    """Return list of words in cluster that user hasn't seen yet"""
+    # Get words user has already seen
+    seen_words = [w['word'] for w in st.session_state.word_progress]
+    
+    # Find unseen words in this cluster
+    unseen = []
+    for word_obj in words:
+        korean = word_obj['korean']
+        if korean not in seen_words and word_to_cluster.get(korean) == cluster_id:
+            unseen.append(word_obj)
+    
+    return unseen
 
-def get_new_word(filtered_words, current_word):
+def get_new_word(filtered_words, current_word, word_to_cluster):
 
     srs_word = get_next_srs_word(user_id)
 
@@ -480,8 +536,23 @@ def get_new_word(filtered_words, current_word):
             if w["korean"] == srs_word:
                 return w
 
-    seen_words = [w['word'] for w in st.session_state.word_progress]
+    # 2. Get cluster weakness
+    cluster_stats = supabase.table("userclusterstats")\
+        .select("cluster_id, accuracy")\
+        .eq("user_id", user_id)\
+        .execute()
+    
+    if cluster_stats.data:
+        # Sort by accuracy (lowest first = weakest)
+        sorted_clusters = sorted(cluster_stats.data, key=lambda x: x['accuracy'])
+        
+        for cluster in sorted_clusters:
+            cluster_id = cluster['cluster_id']
+            unseen = get_unseen_words_in_cluster(user_id, cluster_id, words, word_to_cluster)
+            if unseen:
+                return random.choice(unseen)
 
+    seen_words = [w['word'] for w in st.session_state.word_progress]
     unseen_words = [w for w in filtered_words if w["korean"] not in seen_words]
 
     if unseen_words:
